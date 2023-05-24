@@ -289,3 +289,28 @@ input {
     margin-top: 23px;
 
 }
+.adi {
+    color: #f39418;
+    position: absolute;
+    top: 445px;
+    left: 600px;
+}
+
+.sub {
+    color: #f39418;
+    position: absolute;
+    top: 730px;
+    left: 600px;
+}
+.mult {
+    color: #f39418;
+    position: absolute;
+    top: 980px;
+    left: 600px;
+}
+.div {
+    color: #f39418;
+    position: absolute;
+    top: 1225px;
+    left: 600px;
+}
