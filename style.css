@@ -1,11 +1,11 @@
-body {
-    background-image: url("assets/orange-background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    body {
+        background-image: url("assets/orange-background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
 }
 
-header {
+    header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,35 +15,35 @@ header {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     border-radius: 10px;
-}
-
-.logo {
+    }
+    
+    .logo {
     display: flex;
     align-items: center;
-}
+    }
 
-.logo a {
+    .logo a {
     color: #606060;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-}
-
-.logo img {
+    }
+    
+    .logo img {
     height: 50px;
     margin-right: 10px;
-}
-
-.contact a {
+    }
+    
+    .contact a {
     color: #606060;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-}
+    }
 
 
 
-button {
+    button {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
@@ -54,17 +54,17 @@ button {
     transition: all 0.2s ease-in-out;
 }
 
-button:hover {
+    button:hover {
     background-color: #555;
 }
 
 
-.hp a {
+    .hp a {
     color: #606060;
     text-decoration: none;
 }
 
-.hp-container {
+    .hp-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,16 +72,16 @@ button:hover {
     height: 100vh;
 }
 
-.hp {
+    .hp {
     text-align: center;
 }
 
-.matbasica a {
+    .matbasica a {
     color: #606060;
     text-decoration: none;
 }
 
-.matbasica-container {
+    .matbasica-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,16 +89,16 @@ button:hover {
     height: 100vh;
 }
 
-.matbasica {
+    .matbasica {
     text-align: center;
 }
 
-.quizconc a {
+    .quizconc a {
     color: #606060;
     text-decoration: none;
 }
 
-.quizconc-container {
+    .quizconc-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,7 +106,7 @@ button:hover {
     height: 100vh;
 }
 
-.quizconc {
+    .quizconc {
     text-align: center;
 }
 
@@ -118,7 +118,7 @@ button:hover {
     height: 100vh;
     padding-left: 90px;
     margin-top: -50px;
-
+    
 }
 
 .content {
@@ -163,7 +163,7 @@ button:hover {
 
 .button:hover {
     background-color: #a5a5a5;
-
+    
 }
 
 .container--conceitos {
@@ -189,7 +189,6 @@ p {
 h1 {
     color: #f39418;
     margin-bottom: 15px;
-    text-align: center;
 }
 
 h2 {
@@ -260,7 +259,7 @@ input {
 .btn {
     text-align: center;
     border-radius: 20px;
-
+    
 }
 
 .pa {
@@ -274,7 +273,7 @@ input {
 
 .pg {
     font-size: 25px;
-
+    
 }
 
 .pg h3 {
@@ -282,7 +281,7 @@ input {
 
 }
 
-.resultado {
+.resultado  {
 
     text-align: center;
     font-size: 23px;
@@ -290,7 +289,6 @@ input {
     margin-top: 23px;
 
 }
-
 .adi {
     color: #f39418;
     position: absolute;
@@ -304,31 +302,26 @@ input {
     top: 730px;
     left: 600px;
 }
-
 .mult {
     color: #f39418;
     position: absolute;
     top: 980px;
     left: 600px;
 }
-
 .div {
     color: #f39418;
     position: absolute;
     top: 1225px;
     left: 600px;
 }
-
 .nor {
     color: #333;
 }
-
 .imagemat {
     margin-bottom: 20px;
     width: 400px;
     border: 5px solid #fcb464;
 }
-
 .seta-topo {
     position: fixed;
     bottom: 20px;
@@ -341,34 +334,59 @@ input {
     border-radius: 50%;
     color: white;
     font-size: 24px;
-}
-
-.seta-topo:hover {
+  }
+  
+  .seta-topo:hover {
     background-color: darkorange;
     cursor: pointer;
-}
-
-.hpcont {
-    text-align: center;
-   
+  }
+  .coluna-flutuante {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+  }
+  
+  .icone-rede-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+  }
+  
+  .icone-rede-social:hover {
+    opacity: 1;
+  }
+  
+  .facebook {
+    background-color: #dfaf67;
+  }
+  
+  .twitter {
+    background-color: #6e6e6e;
+  }
+  
+  .instagram {
+    background-color: #f39418;
+  }
+  
+  .linkedin {
+    background-color: #a7a6a6;
+  }
+  
+  .fa {
     font-size: 18px;
-    color: #606060;
-    font-family: "Montserrat", sans-serif;
-    margin-left: 500px;
-    margin-right: 500px;
-    line-height: 27px;
+  }
+  
+  
 
-}
-
-.hplinkcont {
-    text-align: center;
-}
-
-.hplink {
-    color: #5b72be;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    text-decoration: underline;
-}
