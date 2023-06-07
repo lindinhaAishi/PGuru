@@ -45,6 +45,11 @@
     
             <section id="res" class="resultados"></section>
         </div>
+        
+        <div>
+        <canvas id="myChart">
+        </canvas>
+    </div>
     
         <div class="pg">
             <h3>Estabeleça os valores da Progressão Geomética a seguir</h3>
@@ -61,7 +66,12 @@
     
             <section id="res2" class="resultados"></section>
         </div>
+        <div>
+        <canvas id="myChart2">
+        </canvas>
     </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <br>
     <br>
     <br>
@@ -72,6 +82,10 @@
     
     <script>
         function pa() {
+            let y = []
+            let labels = []
+
+            const ctx = document.getElementById("myChart")
             var valor = parseInt(document.getElementById('inicial').value);
             var razao = parseInt(document.getElementById('razao').value);
             var termo = parseInt(document.getElementById('termo').value);
@@ -81,17 +95,42 @@
     
             for (var i = 1; i <= termo; i++) {
                 
-                pa += "Termo " + i + " = "  + valor + "<br />";
-                for(var i = 2; i <= termo; i++){
-                    valor += razao;
-                    pa += "Termo " + i + " = "  + valor + "<br />";
-                }
-    
-            }
-            res.innerHTML = (`Sua progressão é: <br>${pa}`)
+                  pa += "Termo " + i + " = "  + valor + "<br />";
+                valor += razao ;
+
+                labels.push(i)
+                y.push(valor) 
+            
+        }
+            res.innerHTML = (`Sua progressão é: <br>${pa}`) 
+            const data = {
+        labels,
+        datasets: [{
+            data: y,
+            label: "Função Linear"
+        }]
+    }
+
+    const config ={
+        type: "line",
+        data: data,
+        options: {
+            responsive: true
+        }
+    }
+
+    const myChart = new Chart(
+        ctx,
+        config
+    )
         }
     
         function pg() {
+            
+            let y = []
+            let labels = []
+            
+            const ctx = document.getElementById("myChart2")
             var valor = parseInt(document.getElementById('inicial2').value);
             var razao = parseInt(document.getElementById('razao2').value);
             var termo = parseInt(document.getElementById('termo2').value);
@@ -101,9 +140,33 @@
             for (var i = 1; i <= termo; i++) {
                 var termoAtual = valor * Math.pow(razao, i - 1);
                 pg += "Termo " + i + " = " + termoAtual + "<br />";
+                
+                 labels.push(i)
+                y.push(termoAtual)
             }
     
             res.innerHTML = "Sua progressão é: <br>" + pg;
+            
+            const data = {
+        labels,
+        datasets: [{
+            data: y,
+            label: "Função Linear"
+        }]
+    }
+
+    const config ={
+        type: "line",
+        data: data,
+        options: {
+            responsive: true
+        }
+    }
+
+    const myChart = new Chart(
+        ctx,
+        config
+    )
         }
     
         
