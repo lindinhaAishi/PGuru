@@ -1,15 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/logo-onlyPGuru.png" type="image/png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
-    <link rel="stylesheet" href="style.css" />
     <title>PGuru</title>
-    
+
 </head>
+
+<style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f2f2f2;
+        height: 80px;
+        padding: 0 20px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        border-radius: 10px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo a {
+        color: #606060;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .contact a {
+        color: #606060;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    button:hover {
+        background-color: #555;
+    }
+
+
+    .hp a {
+        color: #606060;
+        text-decoration: none;
+    }
+
+    .hp-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .hp {
+        text-align: center;
+    }
+
+    reescreva o codigo de um quiz a seguir estilizando-o para que fique bonito e moderno,
+    crie classes se encessário : < !DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="assets/logo-onlyPGuru.png" type="image/png"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"><title>PGuru</title></head><style>header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f2f2f2;
+        height: 80px;
+        padding: 0 20px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        border-radius: 10px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo a {
+        color: #606060;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .contact a {
+        color: #606060;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    button:hover {
+        background-color: #555;
+    }
+
+
+    .hp a {
+        color: #606060;
+        text-decoration: none;
+    }
+
+    .hp-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .hp {
+        text-align: center;
+    }
+
+    .question {
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .questiontitle {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .questiontext {
+        margin-bottom: 10px;
+    }
+
+    .options {
+        margin-bottom: 10px;
+    }
+
+    .options input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    .button-container {
+        margin-top: 10px;
+    }
+
+    .gabarito {
+        font-weight: bold;
+        margin-top: 40px;
+
+    }
+
+    .gabarito a {
+        margin-top: 20px;
+    }
+
+    .certa {
+        border: 5px solid rgb(130, 212, 130);
+        border-radius: 20px;
+    }
+
+    .errada {
+        border: 5px solid rgb(240, 129, 129);
+        border-radius: 20px;
+    }
+</style>
+
 <body>
     <header>
         <div class="logo">
@@ -29,346 +220,335 @@
             <a href="calculadora.html">CALCULADORA PA E PG</a>
         </div>
     </header>
- <form>
-        <div>
-            <div> 1º) Questão
+    <form>
+        <div class="question">
+            <div class="questiontitle">1º) Questão</div>
+            <div class="questiontext">O primeiro termo de uma progressão geométrica é 10, o quarto termo é 80; logo, a
+                razão dessa progressão é:</div>
+            <div class="options">
+                <div>
+                    <input type="radio" id="a1" name="questao1" value="A">
+                    <label for="a1">A) 40</label>
+                </div>
+                <br>
 
-                <br> O primeiro termo de uma progressão geométrica é 10, o quarto termo é 80; logo, a razão dessa progressão é: 
-            </div>
-            <div>
-                <input type="radio" id="a1" name="questao1" value="A">
-                <label for="a1">A) 40</label><br>
-            </div>
-            <div>
-                <input type="radio" id="b1" name="questao1" value="B">
-                <label for="b1">B) 2</label><br>
-            </div>
-            <div>
-                <input type="radio" id="c1" name="questao1" value="C">
-                <label for="c1">C) 12</label>
-            </div>
-            <div>
-                <input type="radio" id="d1" name="questao1" value="D">
-                <label for="c1">D) 5</label>
+                <div>
+                    <input type="radio" id="b1" name="questao1" value="B">
+                    <label for="b1">B) 2</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="c1" name="questao1" value="C">
+                    <label for="c1">C) 12</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="d1" name="questao1" value="D">
+                    <label for="d1">D) 5</label>
+                </div><br>
             </div>
 
-            <button id="botao-questao1">
-                responder
-            </button>
+            <div class="button-container">
+                <button id="botao-questao1">Responder</button>
+            </div>
             <div>
-                <span id="gabarito1"></span>
+                <span id="gabarito1" class="gabarito"></span>
             </div>
         </div>
-
-        
-        <div>
-            <div> 2º) Questão
-
-               <br> Qual a razão da PA de sequência (-18,-11,-4,...)? 
-            </div>
-    
-            <div>
-                <input type="radio" id="a1" name="questao2" value="A">
-                <label for="a1">A) -5 </label><br>
-            </div>
-            <div>
-                <input type="radio" id="b1" name="questao2" value="B">
-                <label for="b1">B) 10 </label><br>
-            </div>
-            <div>
-                <input type="radio" id="c1" name="questao2" value="C">
-                <label for="c1">C) -7 </label>
-            </div>
-            <div>
-                <input type="radio" id="d1" name="questao2" value="D">
-                <label for="c1">D) 7 </label>
+        <br>
+        <div class="question">
+            <div class="questiontitle">2º) Questão</div>
+            <div class="questiontext">Qual a razão da PA de sequência (-18, -11, -4, ...)?</div>
+            <div class="options">
+                <div>
+                    <input type="radio" id="a2" name="questao2" value="A">
+                    <label for="a2">A) -5</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="b2" name="questao2" value="B">
+                    <label for="b2">B) 10</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="c2" name="questao2" value="C">
+                    <label for="c2">C) -7</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="d2" name="questao2" value="D">
+                    <label for="d2">D) 7</label>
+                </div><br>
             </div>
 
-            <button id="botao-questao2">
-                responder
-            </button>
+            <div class="button-container">
+                <button id="botao-questao2">Responder</button>
+            </div>
             <div>
-                <span id="gabarito2"></span>
+                <span id="gabarito2" class="gabarito"></span>
             </div>
         </div>
+        <br>
+        <div class="question">
+            <div class="questiontitle">3º) Questão</div>
+            <div class="questiontext">Numa progressão aritmética de razão r e primeiro termo 3, a soma dos primeiros n
+                termos é 3n², logo, a razão é:</div>
+            <div class="options">
+                <div>
+                    <input type="radio" id="a3" name="questao3" value="A">
+                    <label for="a3">A) 7</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="b3" name="questao3" value="B">
+                    <label for="b3">B) 2</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="c3" name="questao3" value="C">
+                    <label for="c3">C) 6</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="d3" name="questao3" value="D">
+                    <label for="d3">D) 3</label>
+                </div><br>
+            </div>
 
-
-        <div>
-            <div> 3º) Questão 
-
-               <br> Numa progressão aritmética de razão r e primeiro termo 3, a soma dos primeiros n termos é 3n², logo, a razão é: 
-            </div>
-    
-            <div>
-                <input type="radio" id="a1" name="questao3" value="A">
-                <label for="a1">A) 7 </label><br>
+            <div class="button-container">
+                <button id="botao-questao3">Responder</button>
             </div>
             <div>
-                <input type="radio" id="b1" name="questao3" value="B">
-                <label for="b1">B) 2 </label><br>
-            </div>
-            <div>
-                <input type="radio" id="c1" name="questao3" value="C">
-                <label for="c1">C) 6 </label>
-            </div>
-            <div>
-                <input type="radio" id="d1" name="questao3" value="D">
-                <label for="c1">D) 3 </label>
-            </div>
-
-            <button id="botao-questao3">
-                responder
-            </button>
-            <div>
-                <span id="gabarito3"></span>
+                <span id="gabarito3" class="gabarito"></span>
             </div>
         </div>
+        <br>
+        <div class="question">
+            <div class="questiontitle">4º) Questão</div>
+            <div class="questiontext">Qual é o décimo termo da Progressão Aritmética (3, 12, ...)?</div>
+            <div class="options">
+                <div>
+                    <input type="radio" id="a4" name="questao4" value="A">
+                    <label for="a4">A) 55</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="b4" name="questao4" value="B">
+                    <label for="b4">B) 68</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="c4" name="questao4" value="C">
+                    <label for="c4">C) 84</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="d4" name="questao4" value="D">
+                    <label for="d4">D) 40</label>
+                </div><br>
 
-
-        <div>
-            <div> 4º) Questão 
-
-              <br>  Qual é o décimo termo da Progressão Aritmética (3,12,...)? 
-            </div>
-    
-            <div>
-                <input type="radio" id="a1" name="questao4" value="A">
-                <label for="a1">A) 55 </label><br>
-            </div>
-            <div>
-                <input type="radio" id="b1" name="questao4" value="B">
-                <label for="b1">B) 68 </label><br>
-            </div>
-            <div>
-                <input type="radio" id="c1" name="questao4" value="C">
-                <label for="c1">C) 84 </label>
-            </div>
-            <div>
-                <input type="radio" id="d1" name="questao4" value="D">
-                <label for="c1">D) 40 </label>
             </div>
 
-            <button id="botao-questao4">
-                responder
-            </button>
+            <div class="button-container">
+                <button id="botao-questao4">Responder</button>
+            </div>
             <div>
-                <span id="gabarito4"></span>
+                <span id="gabarito4" class="gabarito"></span>
             </div>
         </div>
+        <br>
+        <div class="question">
+            <div class="questiontitle">5º) Questão</div>
+            <div class="questiontext">Quantos meios aritméticos devemos inserir entre 8 e 89 de modo que a sequência
+                obtida tenha razão 3?</div>
+            <div class="options">
+                <div>
+                    <input type="radio" id="a5" name="questao5" value="A">
+                    <label for="a5">A) 26</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="b5" name="questao5" value="B">
+                    <label for="b5">B) 51</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="c5" name="questao5" value="C">
+                    <label for="c5">C) 15</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="d5" name="questao5" value="D">
+                    <label for="d5">D) 23</label>
+                </div><br>
+            </div>
 
-
-        <div>
-            <div> 5º) Questão
-
-             <br>   Quantos meios aritméticos devemos inserir entre 8 e 89 de modo que a sequência obtida tenha razão 3? 
-            </div>
-    
-            <div>
-                <input type="radio" id="a1" name="questao5" value="A">
-                <label for="a1">A) 26 </label><br>
+            <div class="button-container">
+                <button id="botao-questao5">Responder</button>
             </div>
             <div>
-                <input type="radio" id="b1" name="questao5" value="B">
-                <label for="b1">B) 51 </label><br>
-            </div>
-            <div>
-                <input type="radio" id="c1" name="questao5" value="C">
-                <label for="c1">C) 15 </label>
-            </div>
-            <div>
-                <input type="radio" id="d1" name="questao5" value="D">
-                <label for="c1">D) 23 </label>
-            </div>
-
-            <button id="botao-questao5">
-                responder
-            </button>
-            <div>
-                <span id="gabarito5"></span>
+                <span id="gabarito5" class="gabarito"></span>
             </div>
         </div>
-
-
-
-
-        
-        <div>
-            <div> 6º) Questão 
-
-              <br>  Qual a definição de PA? </div>
-    
+        <br>
+        <div class="question">
+            <div class="questiontitle">6º) Questão</div>
+            <div class="questiontext">Qual a definição de PA?</div>
+            <div class="options">
+                <div></div>
+                <input type="radio" id="a6" name="questao6" value="A">
+                <label for="a6">(P.A.) Um termo qualquer de uma progressão partindo do primeiro termo e da
+                    razão.</label>
+            </div><br>
             <div>
-                <input type="radio" id="a1" name="questao6" value="A">
-                <label for="a1">A) (P.A.)  Um termo qualquer de uma progressão partindo do primeiro termo e da razão.</label><br>
-            </div>
+                <input type="radio" id="b6" name="questao6" value="B">
+                <label for="b6">(P.A.) Uma sequência numérica que não se comporta de forma linear.</label>
+            </div><br>
             <div>
-                <input type="radio" id="b1" name="questao6" value="B">
-                <label for="b1">B) (P.A.) Uma sequência numérica que não se comporta de forma linear.</label><br>
-            </div>
+                <input type="radio" id="c6" name="questao6" value="C">
+                <label for="c6">(P.A.) Números com o mesmo quociente na divisão de dois termos consecutivos.</label>
+            </div><br>
             <div>
-                <input type="radio" id="c1" name="questao6" value="C">
-                <label for="c1">C) (P.A.) Números com o mesmo quociente na divisão de dois termos consecutivos.</label>
-            </div>
-            <div>
-                <input type="radio" id="d1" name="questao6" value="D">
-                <label for="c1">D)  (P.A.) Uma sequência numérica que se comporta de forma linear. </label>
-            </div>
-
-            <button id="botao-questao6">
-                responder
-            </button>
-            <div>
-                <span id="gabarito6"></span>
-            </div>
+                <input type="radio" id="d6" name="questao6" value="D">
+                <label for="d6">(P.A.) Uma sequência numérica que se comporta de forma linear.</label>
+            </div><br>
         </div>
 
-
-
+        <div class="button-container">
+            <button id="botao-questao6">Responder</button>
+        </div>
         <div>
-            <div> 7º) Questão
+            <span id="gabarito6" class="gabarito"></span>
+        </div>
+        </div>
+        <br>
+        <div class="question">
+            <div class="questiontitle">7º) Questão</div>
+            <div class="questiontext">Se (a1, a2,..., a13) é uma progressão aritmética (PA) cuja soma dos termos é igual
+                a 78, então a7 é igual a:</div>
+            <div class="options">
+                <div>
+                    <input type="radio" id="a7" name="questao7" value="A">
+                    <label for="a7">A) 9</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="b7" name="questao7" value="B">
+                    <label for="b7">B) 8</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="c7" name="questao7" value="C">
+                    <label for="c7">C) 7</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="d7" name="questao7" value="D">
+                    <label for="d7">D) 6</label>
+                </div><br>
+            </div>
 
-               <br> Se (a1, a2,..., a13) é uma progressão aritmética (PA) cuja soma dos termos é igual a 78, então a7 é igual a:
-            </div>
-    
-            <div>
-                <input type="radio" id="a1" name="questao7" value="A">
-                <label for="a1">A) 9 </label><br>
+            <div class="button-container">
+                <button id="botao-questao7">Responder</button>
             </div>
             <div>
-                <input type="radio" id="b1" name="questao7" value="B">
-                <label for="b1">B) 8 </label><br>
-            </div>
-            <div>
-                <input type="radio" id="c1" name="questao7" value="C">
-                <label for="c1">C) 7 </label>
-            </div>
-            <div>
-                <input type="radio" id="d1" name="questao7" value="D">
-                <label for="c1">D) 6 </label>
-            </div>
-
-            <button id="botao-questao7">
-                responder
-            </button>
-            <div>
-                <span id="gabarito7"></span>
+                <span id="gabarito7" class="gabarito"></span>
             </div>
         </div>
-
-
-
-        <div>
-            <div> 8º) Questão
-
-              <br>  Em uma progressão aritmética em que o primeiro termo é 23 e a razão é – 6, a posição ocupada pelo elemento – 13 é:
-            </div>
-    
-            <div>
-                <input type="radio" id="a1" name="questao8" value="A">
-                <label for="a1">A) 6ª </label><br>
-            </div>
-            <div>
-                <input type="radio" id="b1" name="questao8" value="B">
-                <label for="b1">B) 5ª </label><br>
-            </div>
-            <div>
-                <input type="radio" id="c1" name="questao8" value="C">
-                <label for="c1">C) 7ª </label>
-            </div>
-            <div>
-                <input type="radio" id="d1" name="questao8" value="D">
-                <label for="c1">D) 8ª </label>
+        <br>
+        <div class="question">
+            <div class="questiontitle">8º) Questão</div>
+            <div class="questiontext">Em uma progressão aritmética em que o primeiro termo é 23 e a razão é -6, a
+                posição ocupada pelo elemento -13 é:</div>
+            <div class="options">
+                <div>
+                    <input type="radio" id="a8" name="questao8" value="A">
+                    <label for="a8">A) 6ª</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="b8" name="questao8" value="B">
+                    <label for="b8">B) 5ª</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="c8" name="questao8" value="C">
+                    <label for="c8">C) 7ª</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="d8" name="questao8" value="D">
+                    <label for="d8">D) 8ª</label>
+                </div><br>
             </div>
 
-            <button id="botao-questao8">
-                responder
-            </button>
+            <div class="button-container">
+                <button id="botao-questao8">Responder</button>
+            </div>
             <div>
-                <span id="gabarito8"></span>
+                <span id="gabarito8" class="gabarito"></span>
             </div>
         </div>
+        <br>
+        <div class="question">
+            <div class="questiontitle">9º) Questão</div>
+            <div class="questiontext">Os termos da soma S = 4 + 8 + 16 + ... + 2048 estão em progressão geométrica.
+                Assinale o valor de S.</div>
+            <div class="options">
+                <div>
+                    <input type="radio" id="a9" name="questao9" value="A">
+                    <label for="a9">A) 4092</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="b9" name="questao9" value="B">
+                    <label for="b9">B) 4100</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="c9" name="questao9" value="C">
+                    <label for="c9">C) 7150</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="d9" name="questao9" value="D">
+                    <label for="d9">D) 65536</label>
+                </div><br>
 
-
-
-
-        <div>
-            <div> 9º) Questão
-
-               <br> Os termos da soma S = 4 + 8 + 16 + ... + 2048 estão em progressão geométrica.
-
-                Assinale o valor de S.
-                 </div>
-    
-            <div>
-                <input type="radio" id="a1" name="questao9" value="A">
-                <label for="a1">A)4092 </label><br>
-            </div>
-            <div>
-                <input type="radio" id="b1" name="questao9" value="B">
-                <label for="b1">B) 4100 </label><br>
-            </div>
-            <div>
-                <input type="radio" id="c1" name="questao9" value="C">
-                <label for="c1">C) 7150 </label>
-            </div>
-            <div>
-                <input type="radio" id="d1" name="questao9" value="D">
-                <label for="c1">D)  65536 </label>
             </div>
 
-            <button id="botao-questao9">
-                responder
-            </button>
+            <div class="button-container">
+                <button id="botao-questao9">Responder</button>
+            </div>
             <div>
-                <span id="gabarito9"></span>
+                <span id="gabarito9" class="gabarito"></span>
             </div>
         </div>
-
-
-
-        <div>
-            <div> 10º) Questão
-
-              <br>  Dadas as sequências ܽa com n subscrito igual a n ao quadrado mais 4 n mais 4 vírgula espaço b com n subscrito igual a 2 à potência de n ao quadrado fim do exponencial vírgula espaço c com n subscrito igual a a com n mais 1 subscrito fim do subscrito menos a com n subscrito espaço e espaço d com n subscrito igual a b com n mais 1 subscrito fim do subscrito sobre b com n subscrito vírgula espaçodefinidas para valores inteiros positivos de n, considere as seguintes afirmações:
-
-                I. ܽané uma progressão geométrica;
-                II. ܾbn é uma progressão geométrica;
-                III. ܿcné uma progressão aritmética;
-                IV. ݀dn é uma progressão geométrica.
-                
-                São verdadeiras apenas: 
+        <br>
+        <div class="question">
+            <div class="questiontitle">10º) Questão</div>
+            <div class="questiontext">
+                Dadas as sequências:
+                <br>ܽa com n subscrito igual a n ao quadrado mais 4 n mais 4 vírgula espaço
+                <br>b com n subscrito igual a 2 à potência de n ao quadrado fim do exponencial vírgula espaço
+                <br>c com n subscrito igual a a com n mais 1 subscrito fim do subscrito menos a com n subscrito espaço e
+                <br>d com n subscrito igual a b com n mais 1 subscrito fim do subscrito sobre b com n subscrito vírgula
+                espaço
+                <br>definidas para valores inteiros positivos de n, considere as seguintes afirmações:
+                <br><br>I. ܽané uma progressão geométrica;
+                <br>II. ܾbn é uma progressão geométrica;
+                <br>III. ܿcné uma progressão aritmética;
+                <br>IV. ݀dn é uma progressão geométrica.
+                <br><br>São verdadeiras apenas:
             </div>
-    
-            <div>
-                <input type="radio" id="a1" name="questao10" value="A">
-                <label for="a1">A) I,II e III. </label><br>
-            </div>
-            <div>
-                <input type="radio" id="b1" name="questao10" value="B">
-                <label for="b1">B) I,II e IV. </label><br>
-            </div>
-            <div>
-                <input type="radio" id="c1" name="questao10" value="C">
-                <label for="c1">C) I e III. </label>
-            </div>
-            <div>
-                <input type="radio" id="d1" name="questao10" value="D">
-                <label for="c1">D) III e IV </label>
+            <div class="options">
+                <div>
+                    <input type="radio" id="a10" name="questao10" value="A">
+                    <label for="a10">A) I, II e III</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="b10" name="questao10" value="B">
+                    <label for="b10">B) I, II e IV</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="c10" name="questao10" value="C">
+                    <label for="c10">C) I e III</label>
+                </div><br>
+                <div>
+                    <input type="radio" id="d10" name="questao10" value="D">
+                    <label for="d10">D) III e IV</label>
+                </div><br>
             </div>
 
-            <button id="botao-questao10">
-                responder
-            </button>
+            <div class="button-container">
+                <button id="botao-questao10">Responder</button>
+            </div>
             <div>
-                <span id="gabarito10"></span>
+                <span id="gabarito10" class="gabarito"></span>
             </div>
         </div>
-
-
-
+        <br>
     </form>
 
     <script src="script2.js"></script>
 
 </body>
+
 </html>
