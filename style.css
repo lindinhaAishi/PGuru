@@ -565,7 +565,25 @@ footer img {
     margin: 0 10px;
 }
 
+.contcanvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
 
+.canvas {
+    min-width: 600px;
+    min-height: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 600px;
+    height: 400px;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+}
 
 @media (max-width:500px) {
     .footer-menu ul {
